@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "python.pythonPath": "/home/kenny/anaconda3/envs/plural/bin/python",
+    "python.linting.enabled": false,
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run File",
+            "command": "${config:python.pythonPath} ${file} --train OrcaSet140518.csv",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "nosetest",
+            "command": "nosetests -v",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            }
+        }
+    ]
+}
